@@ -1,0 +1,8 @@
+<button class="btn btn-primary" [disabled]="!allowNewServer"> Add Server</button>
+<!-- we are binding this native browser property with allowNewServer (In a way we are changing browser button property in DOM) -->
+<hr>
+<p>{{allowNewServer}} </p>
+<p [innerText]="allowNewServer"></p>
+
+<app-server></app-server>
+<app-server></app-server>
