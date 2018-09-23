@@ -5,13 +5,28 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-server', // Should be a string and this is where html should go
-  templateUrl: './server.component.html'
+  templateUrl: './server.component.html',
+  styles: [
+    `
+      .online {
+        color: white;
+      }
+    `
+  ]
 }) // We have to pass javascript object to configure it.
 export class ServerComponent {
   serverId = 10;
   serverStatus = 'offline';
 
+  constructor() {
+    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+  }
+
   getServerStatus() {
     return this.serverStatus;
+  }
+
+  getColor() {
+    return this.serverStatus === 'online' ? 'green' : 'red';
   }
 }
