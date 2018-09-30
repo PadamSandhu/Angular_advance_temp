@@ -6,23 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements = [];
-  newServerName = '';
-  newServerContent = '';
+  serverElements = [{ type: 'server', name: 'TestServer', content: 'Just a test' }];
+  // Step one, we are passing this property down to the child component using ng and than binding it to
+  // child using @Input()
 
-  onAddServer() {
+  onServerAdded(serverData: { name: string, content: string }) {  // We created this new methord to b
     this.serverElements.push({
       type: 'server',
-      name: this.newServerName,
-      content: this.newServerContent
+      name: serverData.name,
+      content: serverData.content
     });
   }
 
-  onAddBlueprint() {
+  onBlueprintAdded(blueprintData: { name: string, content: string }) {
     this.serverElements.push({
       type: 'blueprint',
-      name: this.newServerName,
-      content: this.newServerContent
+      name: blueprintData.name,
+      content: blueprintData.content
     });
   }
 }
