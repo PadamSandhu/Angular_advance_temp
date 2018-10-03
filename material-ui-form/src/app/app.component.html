@@ -1,0 +1,53 @@
+<div class="example-container">
+  <!-- Changed Float lable to never , other options are always, auto -->
+  <mat-form-field floatLabel="never">
+    <input matInput placeholder="Input">
+  </mat-form-field>
+
+  <mat-form-field>
+    <!-- required attribute     can use hideRequiredMarker for using *-->
+    <textarea required matInput placeholder="Textarea"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Select">
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+<!-- Hint  -->
+  <mat-form-field floatLabel="auto">
+      <input matInput placeholder="Input">
+      <mat-hint align="start">This is the hint</mat-hint>
+  </mat-form-field>
+
+  <!-- Error  -->
+  <!-- <div class="example-container">
+      <mat-form-field>
+        <input matInput placeholder="Enter your email" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <mat-hint align="start">This is the hint with error</mat-hint>
+      </mat-form-field>
+    </div> -->
+</div>
+
+    <form [formGroup]="submitForm" (ngSubmit)="onSubmit()" class="example-form">
+
+        <label for="username">Username</label>
+        <mat-form-field  class="example-full-width">
+          <input formControlName="username" matInput placeholder="User Name" >
+          <mat-error *ngIf="submitForm.get('username').invalid">Please enter a valid username</mat-error>
+        </mat-form-field>
+
+        <mat-radio-group formControlName="gender" >
+            <mat-radio-button value="1">Option 1</mat-radio-button>
+            <mat-radio-button value="2">Option 2</mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field>
+            <input formControlName="email" matInput placeholder="Enter your email">
+            <mat-error *ngIf="submitForm.get('email').invalid">{{getErrorMessage()}}</mat-error>
+            <mat-hint align="start">This is the hint with error</mat-hint>
+          </mat-form-field>
+
+        <button type="submit" mat-button>Click me!</button>
+      </form>
