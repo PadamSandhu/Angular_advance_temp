@@ -26,12 +26,15 @@
   <button type="submit" mat-button>Click me!</button>
 </form> -->
 
+<mat-card>
+  <h1 class="align-middle">Create Contract</h1>
+</mat-card>
 
-<mat-grid-list cols="4" rowHeight="100px">
+<mat-grid-list cols="12" rowHeight="100px">
 
   <form [formGroup]="submitForm" (ngSubmit)="onSubmit()" class="example-form">
 
-    <mat-grid-tile [colspan]="2">
+    <mat-grid-tile [colspan]="4">
       <mat-form-field>
 
         <mat-select placeholder="OLA Type" formControlName="olatype" required>
@@ -53,7 +56,7 @@
       </mat-form-field>
     </mat-grid-tile>
 
-    <mat-grid-tile [colspan]="2">
+    <mat-grid-tile [colspan]="4">
 
       <mat-form-field>
         <mat-select placeholder="Publisher" formControlName="publisher" required>
@@ -75,7 +78,7 @@
 
     </mat-grid-tile>
 
-    <mat-grid-tile [colspan]="2">
+    <mat-grid-tile [colspan]="4">
 
       <mat-form-field>
         <mat-select placeholder="Subscriber" formControlName="subscriber" required>
@@ -99,7 +102,7 @@
 
 
 
-    <mat-grid-tile [colspan]="2">
+    <mat-grid-tile [colspan]="4">
 
       <mat-form-field>
         <mat-select placeholder="Event Owner" formControlName="eventowner" required>
@@ -123,7 +126,7 @@
 
 
 
-    <mat-grid-tile [colspan]="2">
+    <mat-grid-tile [colspan]="4">
 
       <mat-form-field class="example-full-width">
         <input formControlName="feedname" matInput placeholder="Feed Name *">
@@ -133,7 +136,7 @@
     </mat-grid-tile>
 
 
-    <mat-grid-tile [colspan]="2">
+    <mat-grid-tile [colspan]="4">
 
       <mat-form-field>
         <mat-select placeholder="Frequency" formControlName="frequency" required>
@@ -156,7 +159,7 @@
     </mat-grid-tile>
 
 
-    <mat-grid-tile [colspan]="2">
+    <mat-grid-tile [colspan]="4">
 
       <mat-form-field>
         <mat-select placeholder="Calendar Includes" formControlName="delivery_days" multiple required>
@@ -170,7 +173,7 @@
 
     </mat-grid-tile>
 
-    <mat-grid-tile [colspan]="2">
+    <mat-grid-tile [colspan]="4">
 
       <mat-form-field>
         <mat-select placeholder="Calendar Exclude" formControlName="delivery_exclusions" multiple required>
@@ -185,7 +188,7 @@
     </mat-grid-tile>
 
 
-    <mat-grid-tile [colspan]="2">
+    <mat-grid-tile [colspan]="4">
 
       <mat-form-field class="example-full-width">
         <input formControlName="t-offset" matInput placeholder="Calender Offset *">
@@ -195,7 +198,7 @@
     </mat-grid-tile>
 
 
-    <mat-grid-tile [colspan]="2">
+    <mat-grid-tile [colspan]="4">
 
       <mat-form-field>
         <mat-select placeholder="Offset Exclude" formControlName="offset_exclude" multiple required>
@@ -211,7 +214,7 @@
 
 
 
-    <mat-grid-tile [colspan]="4">
+    <mat-grid-tile [colspan]="12">
       <button type="submit" mat-button>Click me!</button>
     </mat-grid-tile>
 
