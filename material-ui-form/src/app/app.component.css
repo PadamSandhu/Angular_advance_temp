@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 .align-middle {
-=======
-.align-middle{
->>>>>>> d81a20c14c7b8a874b3040fc30c817982612eebf
   text-align: center;
 }
 
 .topcard {
-<<<<<<< HEAD
   color: rgba(53, 53, 241, 0.986);
 }
 
@@ -54,7 +49,4 @@ td {
 
 .ReviewButton {
   position: absolute;
-=======
-  color: rgba(53, 53, 241, 0.986)
->>>>>>> d81a20c14c7b8a874b3040fc30c817982612eebf
 }
