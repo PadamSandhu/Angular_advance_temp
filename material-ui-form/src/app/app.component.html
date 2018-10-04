@@ -1,0 +1,465 @@
+<div *ngIf="mainPage">
+  <mat-card>
+    <h1 class="align-middle topcard">Create Contract</h1>
+  </mat-card>
+
+
+  <mat-card id="FormId">
+    <mat-grid-list cols="12" rowHeight="100px">
+
+      <form [formGroup]="submitForm" (ngSubmit)="onSubmit()" class="example-form">
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+
+            <mat-select placeholder="olaType" formControlName="olaType" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('olaType').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="publisher" formControlName="publisher" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('publisher').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="subscriber" formControlName="subscriber" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('subscriber').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="eventOwner" formControlName="eventOwner" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('eventOwner').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+
+        <mat-grid-tile [colspan]="12">
+
+          <mat-form-field class="Form-Input-full-width">
+            <input formControlName="feedName" matInput placeholder="feedName *">
+            <mat-error *ngIf="submitForm.get('feedName').invalid">Please enter a valid Input</mat-error>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="frequency" formControlName="frequency" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('frequency').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="calendarInclude" formControlName="calendarInclude" multiple required>
+              <mat-option value="value1"> Value 1</mat-option>
+              <mat-option value="value2"> Value 2</mat-option>
+            </mat-select>
+
+            <mat-error *ngIf="submitForm.get('calendarInclude').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="calendarExclude" formControlName="calendarExclude" multiple required>
+              <mat-option value="value1"> Value 1</mat-option>
+              <mat-option value="value2"> Value 2</mat-option>
+            </mat-select>
+
+            <mat-error *ngIf="submitForm.get('calendarExclude').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="12">
+
+          <mat-form-field class="Form-Input-full-width">
+            <input formControlName="calendarOffset" matInput placeholder="calendarOffset *">
+            <mat-error *ngIf="submitForm.get('calendarOffset').invalid">Please enter a valid Input</mat-error>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="offsetExclude" formControlName="offsetExclude" multiple required>
+              <mat-option value="value1"> Value 1</mat-option>
+              <mat-option value="value2"> Value 2</mat-option>
+            </mat-select>
+
+            <mat-error *ngIf="submitForm.get('offsetExclude').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="location" formControlName="location" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('location').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="12">
+
+          <mat-form-field class="Form-Input-full-width">
+            <input formControlName="systemName" matInput placeholder="systemName *">
+            <mat-error *ngIf="submitForm.get('systemName').invalid">Please enter a valid Input</mat-error>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="systemInstance" formControlName="systemInstance" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('systemInstance').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="processName" formControlName="processName" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('processName').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="progress" formControlName="progress" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('progress').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="12">
+
+          <mat-form-field class="Form-Input-full-width">
+            <input formControlName="expectedTime" matInput placeholder="expectedTime *">
+            <mat-error *ngIf="submitForm.get('expectedTime').invalid">Please enter a valid Input</mat-error>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="alertType" formControlName="alertType" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('alertType').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="12">
+
+          <mat-form-field class="Form-Input-full-width">
+            <input formControlName="alertThreshold" matInput placeholder="alertThreshold *">
+            <mat-error *ngIf="submitForm.get('alertThreshold').invalid">Please enter a valid Input</mat-error>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <input matInput formControlName="startBusinessDate" [matDatepicker]="picker" placeholder="startBusinessDate"
+              required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="submitForm.get('startBusinessDate').invalid">Please enter a valid Input</mat-error>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <input placeholder="endBusinessDate" formControlName="endBusinessDate" matInput [matDatepicker]="picker1"
+              required>
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+            <mat-error *ngIf="submitForm.get('endBusinessDate').invalid">Please enter a valid Input</mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="destinationZone" formControlName="destinationZone" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('destinationZone').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="feedType" formControlName="feedType" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('feedType').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="12">
+
+          <mat-form-field class="Form-Input-full-width">
+            <input formControlName="content" matInput placeholder="content *">
+            <mat-error *ngIf="submitForm.get('content').invalid">Please enter a valid Input</mat-error>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="6">
+
+          <mat-form-field class="Form-Drop-Down-6">
+            <mat-select placeholder="timeZone" formControlName="timeZone" required>
+
+              <mat-option>--</mat-option>
+
+              <mat-option value="value1">
+                First option
+              </mat-option>
+
+              <mat-option value="value2">
+                Second option
+              </mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="submitForm.get('timeZone').invalid">Please choose an valid Input</mat-error>
+            <mat-hint> Hello this is the hint</mat-hint>
+          </mat-form-field>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="12">
+          <button mat-raised-button color="primary" type="submit" mat-button>Review!</button>
+        </mat-grid-tile>
+      </form>
+
+    </mat-grid-list>
+  </mat-card>
+</div>
+
+<!-- This is for The table -->
+<div class="reviewPage" *ngIf="reviewPage">
+  <mat-card>
+    <h1 class="align-middle">Review Page</h1>
+  </mat-card>
+  <mat-card class="reviewPageCard">
+
+    <table>
+      <tr *ngFor="let row of formDataFinalArray">
+        <ng-container>
+          <th>{{row[0]}}</th>
+          <td>{{row[1]}}</td>
+        </ng-container>
+
+      </tr>
+    </table>
+  </mat-card>
+  <div class="wrapper">
+    <button class="ReviewButton" mat-raised-button color="primary" (click)="reviewEditForm()" mat-button>Review!</button>
+  </div>
+</div>
