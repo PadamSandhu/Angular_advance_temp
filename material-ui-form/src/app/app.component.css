@@ -48,5 +48,6 @@ td {
 }
 
 .ReviewButton {
-  position: absolute;
+  display: inline-block;
+  margin: 20px;
 }

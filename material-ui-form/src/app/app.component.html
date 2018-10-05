@@ -460,6 +460,23 @@
     </table>
   </mat-card>
   <div class="wrapper">
-    <button class="ReviewButton" mat-raised-button color="primary" (click)="reviewEditForm()" mat-button>Edit Contract!</button>
+    <button class="ReviewButton" mat-raised-button color="primary" (click)="reviewEditForm()" mat-button>Edit Contract</button>
+    <button class="ReviewButton" mat-raised-button color="accent" (click)="sumbitFinalForm()" mat-button>Submit
+      Contract</button>
+  </div>
+</div>
+
+
+<!-- This is for Submitted Contract -->
+<div class="contractSubmitted" *ngIf="submitPage">
+  <mat-card>
+    <h1 class="align-middle">Contract is submitted</h1>
+  </mat-card>
+  <mat-card class="submittedPageCard">
+    You have created a new Contract.
+  </mat-card>
+  <div class="wrapper">
+    <button class="ReviewButton" mat-raised-button color="primary" (click)="createNewForm()" mat-button>Create New
+      Contract</button>
   </div>
 </div>

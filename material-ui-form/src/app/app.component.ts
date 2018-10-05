@@ -1,14 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import {
   FormControl,
   ReactiveFormsModule,
   Validators,
   FormGroup
 } from '@angular/forms';
-=======
-import { FormControl, ReactiveFormsModule, Validators, FormGroup } from '@angular/forms';
->>>>>>> d81a20c14c7b8a874b3040fc30c817982612eebf
 
 @Component({
   selector: 'app-root',
@@ -17,21 +13,15 @@ import { FormControl, ReactiveFormsModule, Validators, FormGroup } from '@angula
 })
 export class AppComponent implements OnInit {
   title = 'material-ui-form';
-<<<<<<< HEAD
   formDataFinal = {};
   formDataFinalArray: any = [];
   mainPage = true;
   reviewPage = false;
   submitPage = false;
-=======
-
-
->>>>>>> d81a20c14c7b8a874b3040fc30c817982612eebf
 
   /// New Form creation
   submitForm: FormGroup;
 
-<<<<<<< HEAD
   constructor() {}
   ngOnInit() {
     // Need to provide javascript object
@@ -60,27 +50,10 @@ export class AppComponent implements OnInit {
       feedType: new FormControl('', [Validators.required]),
       content: new FormControl('', [Validators.required]),
       timeZone: new FormControl('', [Validators.required])
-=======
-  constructor() { }
-  ngOnInit() {
-    // Need to provide javascript object
-    this.submitForm = new FormGroup({
-      'olatype': new FormControl('', [Validators.required]),
-      'publisher': new FormControl('', [Validators.required]),
-      'subscriber': new FormControl('', [Validators.required]),
-      'eventowner': new FormControl('', [Validators.required]),
-      'feedname': new FormControl('', [Validators.required]),
-      'frequency': new FormControl('', [Validators.required]),
-      'delivery_days': new FormControl('', [Validators.required]),
-      'delivery_exclusions': new FormControl('', [Validators.required]),
-      't-offset': new FormControl('', [Validators.required]),
-      'offset_exclude': new FormControl('', [Validators.required]),
->>>>>>> d81a20c14c7b8a874b3040fc30c817982612eebf
     });
   }
 
   getErrorMessage() {
-<<<<<<< HEAD
     return this.submitForm.get('email').hasError('required')
       ? 'You must enter a value'
       : this.submitForm.get('email').hasError('email')
@@ -107,17 +80,18 @@ export class AppComponent implements OnInit {
     this.submitPage = false;
     this.submitForm.setValue(this.formDataFinal);
   }
-=======
-    return this.submitForm.get('email').hasError('required') ? 'You must enter a value' :
-      this.submitForm.get('email').hasError('email') ? 'Not a valid email' :
-        '';
+  sumbitFinalForm() {
+    // API call should be made here
+    console.log(this.formDataFinal);
+    this.mainPage = false;
+    this.reviewPage = false;
+    this.submitPage = true;
   }
-  onSubmit() {
-    console.log(this.submitForm);
+
+  createNewForm() {
+    this.mainPage = true;
+    this.reviewPage = false;
+    this.submitPage = false;
+    this.submitForm.reset();
   }
-
-
-
-
->>>>>>> d81a20c14c7b8a874b3040fc30c817982612eebf
 }
